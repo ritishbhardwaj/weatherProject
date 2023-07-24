@@ -28,8 +28,8 @@ SECRET_KEY = 'django-insecure-x75=12lt1n^%t7s_yvylk5aby4(e#a@bho0ci89fvbe6!4_chs
 DEBUG = True
 
 # ALLOWED_HOSTS = ['.vercel.app','.now.sh']
-# ALLOWED_HOSTS = ['*']
-ALLOWED_HOSTS = ['weatherproject-production-9f8a.up.railway.app']
+ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['weatherproject-production-9f8a.up.railway.app']
 
 CSRF_TRUSTED_ORIGINS = ['https://weatherproject-production-9f8a.up.railway.app/']
 
@@ -123,7 +123,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = os.path.join(BASE_DIR,"weatherApp")
+STATICFILES_DIRS = [os.path.join(BASE_DIR,"weatherApp","static")]
 print(STATICFILES_DIRS)
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
