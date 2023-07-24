@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-x75=12lt1n^%t7s_yvylk5aby4(e#a@bho0ci89fvbe6!4_chs
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app','.now.sh']
+# ALLOWED_HOSTS = ['.vercel.app','.now.sh']
+ALLOWED_HOSTS = ['.vercel.app']
 
 
 # Application definition
@@ -126,8 +127,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # STATICFILES_DIRS = os.path.join(BASE_DIR,"weatherApp","static")
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
-print(STATIC_ROOT)
-MEDIA_URLS ='/media/'
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+# print(STATIC_ROOT)
+# MEDIA_URLS ='/media/'
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # print(MEDIA_ROOT)

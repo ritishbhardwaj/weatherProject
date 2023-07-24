@@ -15,5 +15,5 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'weatherProject.settings')
 
 application = get_wsgi_application()
 
-
+#  this is coz we want to connect bridgr with vercel
 app=application
