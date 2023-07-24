@@ -1,7 +1,10 @@
 from django.shortcuts import render
 import requests    #this is external lib so need to install via pip
 import datetime
+from django.views.decorators.csrf import csrf_protect
 
+
+@csrf_protect
 def index(request):
     api_key = 'f27f8296f65fe6e63f3a312552ac8897'
     current_weather_url = 'https://api.openweathermap.org/data/2.5/weather?q={}&appid={}'
