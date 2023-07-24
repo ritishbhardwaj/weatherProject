@@ -29,6 +29,7 @@ DEBUG = True
 
 # ALLOWED_HOSTS = ['.vercel.app','.now.sh']
 ALLOWED_HOSTS = ['*']
+CSRF_TRUSTED_ORIGINS = ['https://weatherproject-production-9f8a.up.railway.app/']
 
 
 # Application definition
