@@ -75,15 +75,3 @@ def fetch_weather_and_forecast(api_key, current_weather_url, forecast_url,city=N
     except :
         {'message':"sorry no such city exists"}
 
-
-
-# {
-#     "src": "/static/(.*)",
-#     "dest": "/static/$1"
-# },
-
-# {
-#     "src": "build_files.sh",
-#     "use": "@vercel/static-build",
-#     "config": { "distDir": "staticfiles_build" }
-# }
