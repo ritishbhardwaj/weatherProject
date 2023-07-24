@@ -124,9 +124,10 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+STATICFILES_DIRS = os.path.join(BASE_DIR,"weatherApp","static"),
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 print(STATIC_ROOT)
 MEDIA_URLS ='/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-print(MEDIA_ROOT)
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# print(MEDIA_ROOT)
