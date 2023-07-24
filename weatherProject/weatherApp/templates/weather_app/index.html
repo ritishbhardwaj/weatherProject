@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <script>
+      // When the user clicks on <div>, open the popup
+      function myFunction() {
+        var popup = document.getElementById("myPopup");
+        popup.classList.toggle("show");
+      }
+      </script>
+</head>
+<body>
+
+
+  <div class="header">
+    <h1><p class="logo">The Weather Report</p></h1>
+  </div><br>
+
+
+<form method="post">
+  {% csrf_token %}
+  <input type="text" name="city1" placeholder="Enter city name" required> 
+  <!-- <input type="text" name="city2" placeholder="Enter city 2" > -->
+  <button type="submit">Check Weather</button>
+</form><br>
+
+<div class="comparison-container">
+  {% if message %}
+      <div class="popup" onclick="myFunction()">Click me!
+        <span class="popuptext" id="myPopup">404!! No Such City Exists</span><br><br>
+        <a href="https://www.google.com/">GOOGLE Correct City's Name</a>
+      </div>
+    {% endif %}
+  {% if weather_data1 %}
+    <div class="city-container">
+      {% include 'weather_app/city_weather.html' with weather_data=weather_data1 daily_forecasts=daily_forecasts1 %}
+    </div>
+  {% endif %}
+  {% if weather_data2 %}
+    <div class="city-container">
+      {% include 'weather_app/city_weather.html' with weather_data=weather_data2 daily_forecasts=daily_forecasts2 %}
+    </div>
+  {% endif %}
+</div>
+
+</body>
+</html>
