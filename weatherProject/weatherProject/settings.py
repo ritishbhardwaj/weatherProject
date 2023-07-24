@@ -28,7 +28,9 @@ SECRET_KEY = 'django-insecure-x75=12lt1n^%t7s_yvylk5aby4(e#a@bho0ci89fvbe6!4_chs
 DEBUG = True
 
 # ALLOWED_HOSTS = ['.vercel.app','.now.sh']
-ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['weatherproject-production-9f8a.up.railway.app']
+
 CSRF_TRUSTED_ORIGINS = ['https://weatherproject-production-9f8a.up.railway.app/']
 
 
